@@ -1,8 +1,9 @@
+import { Route, Switch } from 'react-router-dom'
+
 import About from './About'
 import Contact from './Contact'
 import Home from './Home'
 import Projects from './Projects'
-import { Switch, Route } from 'react-router-dom'
 
 function index() {
   return (
