@@ -1,10 +1,16 @@
 import React from 'react'
+import Navigation from './Navigation'
+import styled from 'styled-components'
+
+const StyledHeader = styled.header`
+  background: DarkGreen;
+`
 
 function index() {
   return (
-    <>
-      <h2>Header</h2>
-    </>
+    <StyledHeader>
+      <Navigation />
+    </StyledHeader>
   )
 }
 
