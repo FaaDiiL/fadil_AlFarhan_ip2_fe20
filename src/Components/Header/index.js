@@ -1,9 +1,10 @@
 import React from 'react'
-import Navigation from './Navigation'
 import styled from 'styled-components'
 
+import Navigation from './Navigation'
+
 const StyledHeader = styled.header`
-  background: DarkGreen;
+  background-color: var(--morning-blue);
 `
 
 function index() {

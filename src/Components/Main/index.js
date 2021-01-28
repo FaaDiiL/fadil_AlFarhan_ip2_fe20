@@ -1,26 +1,35 @@
 import { Route, Switch } from 'react-router-dom'
+import styled from 'styled-components'
 
 import About from './About'
 import Contact from './Contact'
 import Home from './Home'
 import Projects from './Projects'
 
+const StyledMain = styled.main`
+  display: flex;
+  padding: 10px;
+  min-height: 75vh;
+`
+
 function index() {
   return (
-    <Switch>
-      <Route exact path='/'>
-        <Home />
-      </Route>
-      <Route path='/about'>
-        <About />
-      </Route>
-      <Route path='/contact'>
-        <Contact />
-      </Route>
-      <Route path='/projects'>
-        <Projects />
-      </Route>
-    </Switch>
+    <StyledMain>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/contact'>
+          <Contact />
+        </Route>
+        <Route path='/projects'>
+          <Projects />
+        </Route>
+      </Switch>
+    </StyledMain>
   )
 }
 
