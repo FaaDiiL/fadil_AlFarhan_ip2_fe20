@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
       /* Solid Color Pallet 3 */
 
       }
+      body{
+      margin: 0 auto;
+      width:100vw;
+       height: 100%;
+      }
   `
 
 export default GlobalStyle

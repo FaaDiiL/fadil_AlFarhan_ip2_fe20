@@ -1,15 +1,28 @@
-import styled from 'styled-components'
+import { Container, Grid, makeStyles, Paper } from '@material-ui/core'
 
-const StyledHome = styled.main`
-  width: 100%;
-  background: var(--ash-gray);
-`
-function index() {
+import aboutViewImg from '../../../img/aboutViewImg.jpg'
+import Image from '../../All/CardWithImg'
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+  },
+  container: {
+  },
+  bg: {},
+  GroupTitle: {},
+}))
+
+function Index() {
+  const classes = useStyles()
   return (
-    <StyledHome>
-      <h2>Home</h2>
-    </StyledHome>
+    <Container className={classes.root}>
+      <Grid container direction='column'>
+        <Grid item xl={12}>
+          <Image imageUrl={aboutViewImg} />
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
 
-export default index
+export default Index

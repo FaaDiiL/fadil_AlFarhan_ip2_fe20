@@ -7,7 +7,6 @@ import Home from './Home'
 import Projects from './Projects'
 
 const StyledMain = styled.main`
-  display: flex;
   padding: 10px;
   min-height: 75vh;
 `

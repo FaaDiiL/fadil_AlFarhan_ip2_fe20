@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 function index() {
   return (
     <StyledFooter>
-      <small>Made by Love!</small>
+      <small>Made by Fadil Al Farhan!</small>
     </StyledFooter>
   )
 }
