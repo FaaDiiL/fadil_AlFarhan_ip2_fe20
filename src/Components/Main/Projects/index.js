@@ -7,22 +7,20 @@ import MyCard from '../../All/Card'
 
 const useStyles = makeStyles(theme=>({
   root: {
-    display:'flex',
+    display: 'flex',
     flexDirection:'row',
     justifyContent: 'center',
     
   },
   
   wrapper: {
-    display:'flex',
-    JustifyContent:'flex-end',
+    display: 'flex',
+    JustifyContent: 'flex-end',
     [theme.breakpoints.up('md')]:{
     },
     [theme.breakpoints.up('lg')]:{
       maxWidth: 800,
-
     }
-
   },
 }))
 
