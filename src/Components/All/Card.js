@@ -6,8 +6,12 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
   root: {
+    [theme.breakpoints.up('xs')]:{
+    maxWidth: '100%',
+    fontSize: '20',
+    },
     minWidth: 215,
     maxWidth: 295,
     minHeight: 150,
@@ -19,7 +23,7 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 2,
   },
-})
+}))
 
 function MyCard({ title, date, description, button }) {
   const classes = useStyles()

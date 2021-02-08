@@ -10,11 +10,10 @@ import React from 'react';
 
 const useStyles = makeStyles({
   root: {
-    width:'100vw',
-    marginLeft:-100,
+    width:'100%',
   },
   media: {
-    width:'100vw',
+    width:'100%',
     display: 'flex',
     flexGrow: 1,
     minHeight: 800,
@@ -29,7 +28,7 @@ export default function MediaCard(props) {
         <CardMedia
           className={classes.media}
           image={props.imageUrl}
-          title="Contemplative Reptile"
+          title={props.title}
         />
     </Card>
   );

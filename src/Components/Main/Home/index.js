@@ -5,23 +5,37 @@ import Image from '../../All/CardWithImg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display:'flex',
+    flexDirection:'row',
+    justifyContent: 'center',
+    
   },
-  container: {
+  
+  wrapper: {
+    display:'flex',
+    JustifyContent:'flex-end',
+    [theme.breakpoints.up('md')]:{
+    },
+    [theme.breakpoints.up('lg')]:{
+      maxWidth: 800,
+    }
+
   },
-  bg: {},
-  GroupTitle: {},
 }))
 
 function Index() {
   const classes = useStyles()
   return (
-    <Container className={classes.root}>
-      <Grid container direction='column'>
-        <Grid item xl={12}>
-          <Image imageUrl={aboutViewImg} />
-        </Grid>
+    <div className={classes.root}>
+    <Grid container  spacing={1} className={classes.wrapper}>
+        
+          <Grid item xs={12} sm={6} md={4}>
+            <Image className={classes.root} imageUrl={aboutViewImg} title={'Me And my daughter'} />
+            
+          </Grid>
       </Grid>
-    </Container>
+    </div>
+
   )
 }
 

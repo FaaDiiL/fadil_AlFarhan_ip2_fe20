@@ -27,6 +27,7 @@ const drawerWidth = 240
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexDirection: 'column',
     width:'100vw',
   },
   drawer: {
@@ -72,37 +73,45 @@ function Index(props) {
       <Divider />
       <List>
         {
+          <Link to='/'>
           <ListItem button>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={<Link to='/'>Home</Link>} />
+            <ListItemText primary={'Home'} />
           </ListItem>
+          </Link>
         }
 
         {
-          <ListItem button>
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary={<Link to='/about'>About</Link>} />
-          </ListItem>
+          <Link to='/about'>
+            <ListItem button>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary={'About'} />
+            </ListItem>
+          </Link>
         }
         {
-          <ListItem button>
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary={<Link to='/projects'>Projects</Link>} />
-          </ListItem>
+          <Link to='/projects'>
+            <ListItem button>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary={'Projects'} />
+            </ListItem>
+          </Link>
         }
         {
-          <ListItem button>
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary={<Link to='/contact'>Contact</Link>} />
-          </ListItem>
+          <Link to='/contact'>
+            <ListItem button>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary={'Contact'} />
+            </ListItem>
+          </Link>
         }
       </List>
     </div>
@@ -114,7 +123,7 @@ function Index(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position='fixed' className={classes.appBar}>
+      <AppBar position='static' color="transparent" className={classes.appBar}>
         <Toolbar>
           <IconButton
             color='inherit'
@@ -126,7 +135,7 @@ function Index(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' noWrap>
-            {'AppbarText'}
+            {'Fadil Al Farhan'}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -165,9 +174,10 @@ function Index(props) {
         {/* <div className={classes.toolbar} /> */}
         <Container>
         <Grid container direction='column' >
-          <grid item xl={12}><Header /></grid>
-          <grid item xl={12}><Main /></grid>
-          <grid item xl={12}><Footer /></grid>
+        
+          <grid item ><Header /></grid>
+          <grid item ><Main /></grid>
+          <grid item ><Footer /></grid>
         </Grid>
         </Container>
       </main>

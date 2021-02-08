@@ -8,7 +8,7 @@ import Projects from './Projects'
 
 const StyledMain = styled.main`
   padding: 10px;
-  min-height: 75vh;
+  min-height: 90vh;
 `
 
 function index() {
