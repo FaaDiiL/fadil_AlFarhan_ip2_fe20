@@ -45,11 +45,11 @@ function About() {
         </h3>
         <h5>
           My name is Fadil and I live in Sweden. I’ve been programming above a
-          year now. The main technology's i've been coding in is: HTML, CSS and
-          JavaScript. I have been active in React the last 3 month, and I'm
-          still learning new fetchers. The best thing of programming is the
-          problem solving part. I love to break down the problem and try to
-          understand it while solve it.
+          year now. The main technologies I use is: HTML, CSS and JavaScript. I
+          have been coding in React the last 3 month, and I'm still learning new
+          fetchers. The best thing of programming is the problem-solving part. I
+          love to break down the problem and try to understand it while solve
+          them. It will help you build more effective apps.
           <br />
           {/* <span className='w3-opacity'>April 7, 2014</span> */}
         </h5>
