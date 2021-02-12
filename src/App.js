@@ -1,13 +1,22 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import Components from './Components/Drawer'
+import About from './About'
+import Contact from './Contact'
 import GlobalStyle from './GlobalStyle'
+import Header from './Header'
+import Home from './Home'
+import Projects from './Projects'
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
-      <Components />
+      <Home />
+      <Header />
+      <About />
+      <Projects />
+      <Contact />
+
     </Router>
   )
 }

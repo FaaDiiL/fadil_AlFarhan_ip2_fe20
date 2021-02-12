@@ -1,24 +1,11 @@
-import { Button } from '@material-ui/core'
-import { purple } from '@material-ui/core/colors'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import React from 'react'
+import React,{ StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
 
-const theme = createMuiTheme({
-  palette: {
-    secondary: {
-     main:'#000',
-    },
-  }
-})
-
 ReactDOM.render(
-  <React.StrictMode>
-  <ThemeProvider theme={theme}>
+  <StrictMode>
     <App />
-  </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 )
