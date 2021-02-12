@@ -25,6 +25,7 @@ const Wrapper = styled.main`
     flex-grow: 1;
     padding: 0 10px;
     margin-bottom: 200px;
+    transition: all 0.2s ease;
     :hover {
       transform: scale(1.2, 1.2);
       path {

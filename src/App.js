@@ -12,11 +12,12 @@ function App() {
     <Router>
       <GlobalStyle />
       <Home />
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
-
+      <div className='w3-content'>
+        <Header />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
     </Router>
   )
 }
