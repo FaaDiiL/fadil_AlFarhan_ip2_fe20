@@ -13,7 +13,6 @@
     "firebase": "^8.2.9",
     "material-ui-icons": "^1.0.0-beta.36",
     "material-ui-image": "^3.3.1",
-    "nodemailer": "^6.4.18",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.1",

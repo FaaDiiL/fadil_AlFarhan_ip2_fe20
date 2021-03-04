@@ -13,26 +13,19 @@ import Projects from './Projects'
 function App() {
   const [mails, setMails] = useState([])
   useEffect(
-    () =>
-      //writeUserData(
+    () => {
       firebase
-        .database()
-        .ref('mails')
-        .on('value', (snapshot) => {
-          console.log('useEffect[]: ', snapshot.val())
-          const usersObject = snapshot.val()
-          const usersList = Object.keys(usersObject).map((key) => ({
-            ...usersObject[key],
-            uid: key,
-          }))
-          console.log('REAL ONE BELOW')
-          console.log(usersList)
-          console.log('REAL ONE ENDS')
-          setMails(usersList)
-        }),
-    // ),
-    []
-  )
+      .database()
+      .ref('mails')
+      .on('value', (snapshot) => {
+        const usersObject = snapshot.val()
+        const usersList = Object.keys(usersObject).map((key) => ({
+          ...usersObject[key],
+          uid: key,
+        }))
+        setMails(usersList)
+      })
+    },[])
   return (
     <Router>
       <GlobalStyle />
