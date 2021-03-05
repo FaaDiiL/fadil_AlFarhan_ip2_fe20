@@ -168,7 +168,7 @@ function Projects() {
             <li key={id} className='cards_item'>
               <div className='card'>
                 <div className='card_image'>
-                  <img src='https://picsum.photos/500/300/?image=2' />
+                  <img src='https://picsum.photos/500/300/?image=2' alt={'Some Info!'}/>
                 </div>
                 <div className='card_content'>
                   <h2 className='card_title'>{name}</h2>

@@ -18,12 +18,16 @@ function App() {
       .database()
       .ref('mails')
       .on('value', (snapshot) => {
-        const usersObject = snapshot.val()
-        const usersList = Object.keys(usersObject).map((key) => ({
-          ...usersObject[key],
-          uid: key,
-        }))
-        setMails(usersList)
+        if(snapshot.exists()){
+          const usersObject = snapshot.val()
+          const usersList = Object.keys(usersObject).map((key) => ({
+            ...usersObject[key],
+            uid: key,
+          })
+          )
+          setMails(usersList)
+
+        }
       })
     },[])
   return (

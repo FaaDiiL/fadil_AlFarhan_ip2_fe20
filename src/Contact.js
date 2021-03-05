@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import firebase from './firebase'
@@ -35,11 +35,18 @@ function Contact() {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [message, setMessage] = useState()
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setMyFormVal([...myFormVal, { name: name, email: email, message: message }])
     writeUserData(name,email,message)
+    
+    setName(e.target[0].value = '')
+    setEmail(e.target[1].value = '')
+    setMessage(e.target[2].value = '')
+
   }
+
   return (
     <Wrapper id='Contact'>
       <form

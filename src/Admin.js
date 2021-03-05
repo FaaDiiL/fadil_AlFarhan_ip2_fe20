@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const MessageBoard = styled.div`
-@charset "UTF-8";
 /*PEN STYLES*/
 * {
   box-sizing: border-box;
@@ -11,6 +10,9 @@ const MessageBoard = styled.div`
 body {
   background: #f1f1f1;
   margin: 2rem;
+}
+li{
+  list-style-type: none;
 }
 
 .blog-card {
@@ -161,7 +163,7 @@ body {
 @media (min-width: 640px) {
   .blog-card {
     flex-direction: row;
-    max-width: 700px;
+    width: 640px;
   }
   .blog-card .meta {
     flex-basis: 40%;
@@ -198,25 +200,25 @@ function Admin({ messages }) {
   return (
     <MessageBoard className={'content'}>
       <h1>Message Area!</h1>
-      <ul>
-      <div className="blog-card">
-        <div className="description">
-          <h1>Learning to Code</h1>
-          <h2>Opening a door to the future</h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p className="read-more">
-            <a href="#">Read More</a>
-          </p>
-        </div>
-      </div>
-
-        {messages.map((message, i) => (
+      <ul >
+      {
+        messages.length>0?
+        messages.slice(0).reverse().map((message, i) => (
           <li key={i}>
-            <p className='msg-title'>{message.name}</p>
-            <p className='msg-message'>{message.message}</p>
-            <a className='msg-mail'>{message.email}</a>
+          <div className="blog-card">
+            <div className="description">
+              <h1>{message.name}</h1>
+              {/* <h2>Opening a door to the future</h2> */}
+              <p>{message.message}</p>
+              <p className="read-more">
+                <a href={`mailto:${message.email}`}>{message.email}</a>
+              </p>
+            </div>
+          </div>
           </li>
-        ))}
+          )
+        ):<li>Inbox empty...</li>
+      }
       </ul>
     </MessageBoard>
   )

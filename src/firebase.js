@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+
 import 'firebase/database'
 
 var firebaseConfig = {
@@ -13,6 +14,6 @@ var firebaseConfig = {
 }
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
-// var database = firebase.database()
+
 
 export default firebase
