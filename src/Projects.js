@@ -158,12 +158,10 @@ function Projects() {
         You will se my github repositories below. Take a look if you got some
         time over.
         <br />
-        {/* <p className='w3-opacity'>April 7, 2014</p> */}
       </h5>
       <div className='main'>
         <h1>My github Repos</h1>
         <ul className='cards'>
-          {/** Testing Start */}
           {repos.map(({ id, name, description, updated_at, html_url }) => (
             <li key={id} className='cards_item'>
               <div className='card'>
@@ -174,11 +172,6 @@ function Projects() {
                   <h2 className='card_title'>{name}</h2>
                   <p className='card_text'>
                     {description}
-                    {/* {!description
-                      ? 'No desc yet...'
-                      : description && description.length > 11
-                      ? description.slice(0, 31).concat('...')
-                      : description} */}
                     <span className='Date'>
                       <br />
                       Last edited: {updated_at.substring(0, 10)}
@@ -196,7 +189,6 @@ function Projects() {
           ))}
         </ul>
       </div>
-      {/** Testing end */}
     </Wrapper>
   )
 }
