@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import myImg from './img/aboutViewImg.jpg'
 import { gitHub, linkedIn } from './img/icons'
 
-// import gitIcon from './img/git.svg'
-
 const Wrapper = styled.main`
   background-image: url(${myImg});
   background-repeat: no-repeat;

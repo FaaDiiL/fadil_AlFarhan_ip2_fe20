@@ -13,9 +13,6 @@ const Wrapper = styled.main`
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: rgba(255, 255, 255, 0.9);
-  /* margin-bottom: 300px; */
-
-  /** Test start */
 
   .main {
     max-width: 1200px;
@@ -121,17 +118,15 @@ const Wrapper = styled.main`
     margin-top: 35px;
     text-align: center;
   }
-
-  /** Test End */
 `
 
 function Projects() {
-  const [repos, setRepos] = useState([])
+  const [repository, setRepository] = useState([])
 
   useEffect(() => {
     fetch('https://api.github.com/users/FaaDiiL/repos')
       .then((res) => res.json())
-      .then((data) => setRepos(data))
+      .then((data) => setRepository(data))
   }, [])
 
   return (
@@ -162,7 +157,7 @@ function Projects() {
       <div className='main'>
         <h1>My github Repos</h1>
         <ul className='cards'>
-          {repos.map(({ id, name, description, updated_at, html_url }) => (
+          {repository.map(({ id, name, description, updated_at, html_url }) => (
             <li key={id} className='cards_item'>
               <div className='card'>
                 <div className='card_image'>
