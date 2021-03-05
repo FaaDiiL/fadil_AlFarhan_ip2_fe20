@@ -53,7 +53,7 @@ function Contact() {
         className='w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin'
         onSubmit={handleSubmit}
       >
-        <h2 className='w3-center'>Contact Us</h2>
+        <h2 className='w3-center'>Contact Me</h2>
 
         {/** Full Name */}
         <div className='w3-row w3-section'>
